@@ -1,0 +1,15 @@
+package Chapter05;
+
+//생명 1개, 날개 2개, 걷다, 먹는다.+수영한다.+날다.(인터페이스 다중 상속)
+public class Duck extends Bird implements Swim2, Fly{
+	@Override
+	public void swim() {
+		System.out.println("duck swim.");
+	}
+
+	@Override
+	public void fly() {
+		System.out.println("duck flies");
+	}
+	
+}
