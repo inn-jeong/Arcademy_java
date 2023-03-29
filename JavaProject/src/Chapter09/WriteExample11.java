@@ -15,6 +15,7 @@ public class WriteExample11 {
 			//writer 객체에 write 메소드로 "홍길동" 을 하나씩 받아서 파일로 저장한다.
 			writer.write(data[i]);
 		}
+		writer.write(data);
 		writer.close();
 	}
 }

@@ -20,12 +20,6 @@ public class Test {
             
 //            System.out.println(cont2);
 		
-		
-		
-		
-		
-		
-		
 	}
 		answer[0]=count1;
 		answer[1]=count2;
