@@ -1,31 +1,18 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Test {
 	
 	public static void main(String[] args) {
-		
-		int[] num_list = {1,2,3,4,5};
-        int[] answer = new int [10];
-        int count1 = 0;
-        int count2 = 0;
-        
-		for(int i=0; i<num_list .length; i++){
-            if(num_list[i]%2==0){
-            	count1++;
-            	
-            }else if(num_list[i]%2>0){
-      
-            	count2++;
-       //    	System.out.println(count2);
-            }
-            
-//            System.out.println(cont2);
-		
-	}
-		answer[0]=count1;
-		answer[1]=count2;
-		System.out.println(answer[0]);
-		//System.out.println(count1);
-		
+		Set<Integer> set = new HashSet<Integer>();
+		set.add(1);
+		set.add(4);
+		set.add(5);
+		int[] a = {1,2,-1,-1,3};
+		Arrays.sort(a);
+//		for(int i: a)System.out.print(i+" ");
+		System.out.println("./)/)\n('ㅅ')");
 	}
 }
 
