@@ -91,6 +91,5 @@ public class Calc {
 			break;
 		}
 		sc.close();
-		
 	}
 }
