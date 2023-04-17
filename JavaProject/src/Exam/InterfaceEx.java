@@ -48,4 +48,5 @@ public class InterfaceEx implements ArrayEx{
 		System.out.println("합은 "+a.sumArr(arr));
 	}
 	
+	
 }
