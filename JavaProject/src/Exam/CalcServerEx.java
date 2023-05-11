@@ -7,6 +7,7 @@ import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class CalcServerEx {
 	public static void main(String[] args) {
@@ -34,7 +35,8 @@ public class CalcServerEx {
 					break;
 				}
 				System.out.println(inputMessage);//클라이언트에서 온 메시지
-				String output = calc(inputMessage);
+//				String output = calc1(inputMessage);
+				String output = calc2(inputMessage);
 				out.write(output+"\n");
 				out.flush();//비정상적인 종료일 때 메시지 전송
 			}
@@ -53,7 +55,7 @@ public class CalcServerEx {
 		
 	}
 	//입력받은 문자열로 계산하여 값을 반환
-	public static String calc(String message) {
+	public static String calc1(String message) {
 		String[] arrStr = message.split(" ");
 		if(arrStr.length != 3) return "형식에 맞지 않습니다.";
 		
@@ -82,5 +84,34 @@ public class CalcServerEx {
 			return "잘못 입력하였습니다.";
 		}
 		return result+"";
+	}
+	public static String calc2(String str){
+		StringTokenizer st = new StringTokenizer(str, " ");
+		
+		if(st.countTokens() != 3){
+			return "error";
+		}
+		int op1 = Integer.parseInt(st.nextToken());
+		String op = st.nextToken();
+		int op2 = Integer.parseInt(st.nextToken());
+		int res = 0 ;
+		switch(op){
+		case "+":
+			res = op1+op2;
+			break;
+		case "-":
+			res = op1 - op2;
+			break;
+		case "*":
+			res = op1*op2;
+			break;
+		case "/":
+			if(op2 == 0) return "0으로 나눌 수 없습니다.";
+			res = op1/op2;
+			break;
+		default:
+			return "error";
+		}
+		return res+"";
 	}
 }
