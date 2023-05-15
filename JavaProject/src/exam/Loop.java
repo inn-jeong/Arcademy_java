@@ -2,7 +2,7 @@
  * 자바 개발자
  * 훈련생: 이진영
  * */
-package Exam;
+package exam;
 
 public class Loop {
 	public static void main(String[] args) {

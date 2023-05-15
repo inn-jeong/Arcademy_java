@@ -1,4 +1,4 @@
-package Exam;
+package exam;
 
 import java.util.HashMap;
 import java.util.Scanner;

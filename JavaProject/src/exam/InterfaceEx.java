@@ -1,4 +1,4 @@
-package Exam;
+package exam;
 /*
  * 평가시험: 인터페이스 구현
  * 훈련생 : 이진영
